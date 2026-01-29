@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RENOTA</title>
+    <title>Renota - Ninja Parts</title>
+    <link rel="icon" type="image/png" href="/renota-app/assets/logo%2003%202-lDpgq-6V.png" />
 
     <!-- Import Montserrat Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,6 +13,17 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Import Dense Font -->
+    <link rel="preload" href="/renota-app/assets/Dense-Regular-C6F2I5ou.otf" as="font" type="font/otf" crossorigin />
+    <style>
+      @font-face {
+        font-family: 'Dense-Regular';
+        src: url('/renota-app/assets/Dense-Regular-C6F2I5ou.otf') format('opentype');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
 
     <!-- Tailwind via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -28,6 +40,7 @@
           extend: {
             fontFamily: {
               montserrat: ['Montserrat', 'sans-serif'],
+              dense: ['Dense-Regular', 'sans-serif'],
             },
             colors: {
               brand: {
@@ -108,7 +121,7 @@
         background: #bb2f21;
       }
     </style>
-    <script type="module" crossorigin src="/renota-app/assets/index-CMu57Bhb.js"></script>
+    <script type="module" crossorigin src="/renota-app/assets/index-mbZ1sqyg.js"></script>
   </head>
 
   <body>
