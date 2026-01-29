@@ -236,9 +236,16 @@ const App: React.FC = () => {
 
                 {/* Header */}
                 <header className="text-center space-y-2 mb-10 pt-6">
-                    <h1 className="text-5xl font-montserrat font-semibold text-brand-red tracking-wide">
-                        RENOTA
-                    </h1>
+                    <div className="flex items-center justify-center gap-4">
+                        <img 
+                            src={theme === 'dark' ? './logos/Logo-03.png' : './logos/Logo-04.png'}
+                            alt="RENOTA Logo"
+                            className="h-48 w-auto"
+                        />
+                        <h1 className="text-5xl font-dense font-semibold text-brand-red tracking-wide">
+                            RENOTA
+                        </h1>
+                    </div>
                 </header>
 
                 {/* Configuration */}

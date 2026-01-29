@@ -3,24 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RENOTA</title>
+    <title>Renota - Ninja Parts</title>
+    <link rel="icon" type="image/png" href="./logos/logo 03 2.png" />
+
     <!-- Import Montserrat Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Import Dense Font -->
+    <link rel="preload" href="./fonts/Dense-Regular.otf" as="font" type="font/otf" crossorigin />
+    <style>
+      @font-face {
+        font-family: 'Dense-Regular';
+        src: url('./fonts/Dense-Regular.otf') format('opentype');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+
+    <!-- Tailwind via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Dependencies from original code -->
+
+    <!-- External dependencies -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+    <!-- Tailwind config -->
     <script>
-      // Configure Tailwind with the specific palette
       tailwind.config = {
         darkMode: 'class',
         theme: {
           extend: {
             fontFamily: {
               montserrat: ['Montserrat', 'sans-serif'],
+              dense: ['Dense-Regular', 'sans-serif'],
             },
             colors: {
               brand: {
@@ -29,27 +49,26 @@
                 black: '#191A1A',
                 gray: '#303131',
                 white: '#FFFFFF',
-              }
-            }
-          }
-        }
+              },
+            },
+          },
+        },
       }
     </script>
+
     <style>
       body {
-        background-color: #F3F4F6;
-        color: #191A1A;
+        background-color: #f3f4f6;
+        color: #191a1a;
         transition: background-color 0.3s ease, color 0.3s ease;
       }
-      
+
       html.dark body {
         background-color: #000000;
-        color: #FFFFFF;
+        color: #ffffff;
       }
-      
-      /* Modern Matte Glass Effect */
+
       .glass-panel {
-        /* Light Mode Default */
         background: rgba(255, 255, 255, 0.75);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
@@ -59,68 +78,55 @@
       }
 
       html.dark .glass-panel {
-        background: rgba(25, 26, 26, 0.6); /* Based on #191A1A */
+        background: rgba(25, 26, 26, 0.6);
         border: 1px solid rgba(255, 255, 255, 0.05);
         box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
       }
-      
+
       .glass-input {
-        /* Light Mode Default */
         background: rgba(255, 255, 255, 0.9);
         border: 1px solid rgba(0, 0, 0, 0.1);
-        color: #191A1A;
+        color: #191a1a;
         backdrop-filter: blur(10px);
         transition: all 0.3s ease;
       }
 
       html.dark .glass-input {
-        background: rgba(48, 49, 49, 0.5); /* Based on #303131 */
+        background: rgba(48, 49, 49, 0.5);
         border: 1px solid rgba(255, 255, 255, 0.05);
         color: white;
       }
-      
+
       .glass-input:focus {
-        border-color: #BB2F21;
+        border-color: #bb2f21;
         outline: none;
       }
-      
+
       html.dark .glass-input:focus {
         background: rgba(48, 49, 49, 0.8);
       }
 
-      /* Custom Scrollbar */
       ::-webkit-scrollbar {
         width: 8px;
         height: 8px;
       }
-      ::-webkit-scrollbar-track {
-        background: transparent; 
-      }
       ::-webkit-scrollbar-thumb {
-        background: #D1D5DB; 
+        background: #d1d5db;
         border-radius: 4px;
-      }
-      html.dark ::-webkit-scrollbar-track {
-        background: #000000;
       }
       html.dark ::-webkit-scrollbar-thumb {
         background: #303131;
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: #BB2F21; 
+        background: #bb2f21;
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4"
-  }
-}
-</script>
-</head>
+  </head>
+
   <body>
     <div id="root"></div>
+
+    <!-- 🚀 ENTRY POINT DO REACT (OBRIGATÓRIO PARA O VITE) -->
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
