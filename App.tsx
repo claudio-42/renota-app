@@ -424,7 +424,7 @@ const App: React.FC = () => {
                             onClick={() => setShowLog(!showLog)}
                         >
                             <h3 className="font-mono text-brand-red font-bold flex items-center text-sm">
-                                <span className="mr-2">>_</span> TERMINAL LOG
+                                <span className="mr-2">{'>'}_</span> TERMINAL LOG
                             </h3>
                             <span className="text-xs text-gray-500 dark:text-gray-400 bg-white dark:bg-brand-gray/50 px-2 py-1 rounded border border-gray-300 dark:border-transparent">{showLog ? 'Ocultar' : 'Expandir'}</span>
                         </div>
