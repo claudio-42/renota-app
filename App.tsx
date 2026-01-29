@@ -238,7 +238,7 @@ const App: React.FC = () => {
                 <header className="text-center space-y-2 mb-10 pt-6">
                     <div className="flex items-center justify-center gap-4">
                         <img 
-                            src={theme === 'dark' ? './public/logos/Logo-03.png' : './public/logos/Logo-04.png'}
+                            src={theme === 'dark' ? './logos/Logo-03.png' : './logos/Logo-04.png'}
                             alt="RENOTA Logo"
                             className="h-48 w-auto"
                         />
