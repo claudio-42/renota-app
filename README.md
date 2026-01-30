@@ -1,20 +1,5 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
-
-# Run and deploy your AI Studio app
-
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/drive/1_zLlDkK0PYX7QS8trEBkYcTNM7P8kBw6
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Renota App
+Uma ferramenta feita em React + Typescript para renomear notas fiscais de serviço de marketplaces, poupando várias horas de serviço no fechamento do mês.
+Quando os arquivos são baixados costumam vir com nomes aleatórios e é importante renomeá-los tanto para organização dos arquivos no drive da empresa quanto para ajudar em processos de fechamento.
+Como por exemplo a DRE, para classificar as despesas de estrutura operacional de marketplaces e também no envio das notas para a contabilidade.
+A principal característica da ferramenta é a utilização de um OCR para leitura dos arquivos enviados para identificar valores e fazer a conciliação com os arquivos para atribuir os títulos corretamente.
